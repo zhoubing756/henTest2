@@ -11,7 +11,7 @@ import com.umeng.analytics.MobclickAgent;
  * @function: 所有Activity的基类，用来处理一些公共事件，如：数据统计
  * @date: 16/3/10
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     public String TAG;
 
@@ -34,6 +34,8 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        MobclickAgent.onPageStart(TAG);
+        MobclickAgent.onResume(this);
     }
 
     @Override
@@ -49,6 +51,8 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+        MobclickAgent.onPageEnd(TAG);
+        MobclickAgent.onPause(this);
     }
 
     @Override
