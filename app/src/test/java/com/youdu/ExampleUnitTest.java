@@ -1,4 +1,4 @@
-package com.henry.mytestupgithub;
+package com.youdu;
 
 import org.junit.Test;
 

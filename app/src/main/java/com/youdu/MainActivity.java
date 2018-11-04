@@ -1,10 +1,14 @@
-package com.henry.mytestupgithub;
+package com.youdu;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import com.youdu.R;
+
+public class MainActivity extends AppCompatActivity
+        implements View.OnClickListener{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
